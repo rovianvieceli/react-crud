@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Form from './form';
 
 export default class User extends Component {
     render() {
@@ -12,6 +13,7 @@ export default class User extends Component {
 
         return (
             <div>
+                <Form></Form>
                 <table border="1" cellPadding="5" cellSpacing="0">
                     <thead>
                         <th>Name</th>
