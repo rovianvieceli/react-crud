@@ -1,18 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Page from './Page';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p> Crud em ReactJS </p>
-        <Page />
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      name: 'Rovian'
+    }
+
+    this.changeState = this.changeState.bind(this);
+    this.resetState = this.resetState.bind(this);
+  }
+
+  changeState() {
+    this.setState({
+      name: "Rovian Vieceli"
+    })
+  }
+
+  resetState() {
+    this.setState({
+      name: "Rovian"
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div>
+          {this.state.name}
+        </div>
+        <div>
+          <button onClick={this.changeState}>Change State</button>
+          <button onClick={this.resetState}>Reset State</button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
