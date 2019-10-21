@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-class List extends Component {
+export default class User extends Component {
     render() {
-        const list = [{
+        const user = [{
             name: 'Rovian',
             email: 'rovian@mail.com'
         }, {
@@ -18,7 +18,7 @@ class List extends Component {
                         <th>Email</th>
                     </thead>
                     <tbody>
-                        {list.map(item => (
+                        {user.map(item => (
                             <tr>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
@@ -27,9 +27,7 @@ class List extends Component {
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th colSpan="2">
-                                {`${list.length} registro(s) localizados`}
-                            </th>
+                            <th colSpan="2">{`${User.length} registro(s) localizados`}</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -37,5 +35,3 @@ class List extends Component {
         )
     }
 }
-
-export default List;
