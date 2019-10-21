@@ -3,3 +3,8 @@
 ### Requirements
 * Node JS
 * Npm
+
+### Run React APP
+```bash
+npm start
+```
