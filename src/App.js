@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import List from './List';
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,9 @@ class App extends Component {
           <button onClick={this.changeState}>Change State</button>
           <button onClick={this.resetState}>Reset State</button>
         </div>
+        <p>
+          <List />
+        </p>
       </div>
     );
   }
