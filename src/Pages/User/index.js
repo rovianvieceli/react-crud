@@ -16,12 +16,14 @@ export default class User extends Component {
                 <Form></Form>
                 <table border="1" cellPadding="5" cellSpacing="0">
                     <thead>
-                        <th>Name</th>
-                        <th>Email</th>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        {user.map(item => (
-                            <tr>
+                        {user.map((item, index) => (
+                            <tr key={index}>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
                             </tr>

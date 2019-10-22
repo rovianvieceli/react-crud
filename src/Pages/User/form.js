@@ -1,18 +1,18 @@
 import React from 'react';
-import { reduxForm, Field, submit } from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 
 import { submitUserAction } from '../../Actions/User/UserAction';
 
 const template = props => {
-    const { onSubmit } = props;
+    const { handleSubmit } = props;
 
     const submit = (data, submitUserAction) => {
         submitUserAction(data)
     }
 
     return (
-        <form onSubmit={onSubmit((fields) => submit(fields, submitUserAction))}>
+        <form onSubmit={handleSubmit((formData) => submit(formData, submitUserAction))}>
             <label htmlFor="name">Name</label>
             <Field id="name" type="text" component="input" name="name" />
 
@@ -20,7 +20,7 @@ const template = props => {
             <Field id="email" type="text" component="input" name="email" />
 
             <button type='submit'>Enviar</button>
-        </form>
+        </form >
     )
 }
 
