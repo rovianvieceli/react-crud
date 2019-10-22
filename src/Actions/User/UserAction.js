@@ -7,7 +7,7 @@ export const submitUserAction = (data) => {
             'Content-type': 'application/json'
         },
         body: JSON.stringify(data)
-            .then(response => response.JSON())
-            .then(json => { console.log(json) })
     })
+        .then(response => response.JSON())
+        .then(json => { console.log(json) })
 }
